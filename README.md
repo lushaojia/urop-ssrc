@@ -5,15 +5,6 @@ import numpy as np
 ```
 
 
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-</script>
-<script type="module">import "https://cdn.plot.ly/plotly-3.1.0.min"</script>
-
-
-
-
 ```python
 # Import functions from your Python scripts
 import sys
