@@ -103,7 +103,7 @@ print(f"Percentage of vertices on hole boundaries: {len(boundary_vertices) / len
     Percentage of vertices on hole boundaries: 21.25%
 
 
-### Explore interactive plot of 3D mesh and boundary vertices [here](https://lushaojia.github.io/urop-ssrc/docs/PCA_based_demo.html)
+### Explore interactive plot of 3D mesh and boundary vertices [here](https://lushaojia.github.io/urop-ssrc/PCA_based_demo.html)
 
 ## Method 2: Edge-based
 <div>
@@ -134,7 +134,7 @@ print(f"Percentage of vertices on hole boundaries: {len(boundary_vertices) / len
     Percentage of vertices on hole boundaries: 1.91%
 
 
-### Explore interactive plot of 3D mesh and boundary vertices [here](https://lushaojia.github.io/urop-ssrc/docs/Edge_based_demo.html)
+### Explore interactive plot of 3D mesh and boundary vertices [here](https://lushaojia.github.io/urop-ssrc/Edge_based_demo.html)
 
 # Comparison of the Two Methods
 <div style="display: flex; justify-content: space-around; align-items: center;">
