@@ -54,7 +54,7 @@ print(f"  Z: [{vertices[:, 2].min():.3f}, {vertices[:, 2].max():.3f}]")
 
 # Two Methods for Bounding Holes on a 3D Blender Model
 
-The OBJ file specifies the vertices, edges, faces, face normals, and texture mappings of a 3D model. This notebook demonstrates two prototyped algorithms for finding vertices on the boundary of holes in a malformed 3D model generated from the Neural Radiance Field algorithm.
+The OBJ file specifies the vertices, edges, faces, face normals, and texture mappings of a 3D model. This notebook demonstrates two algorithms for finding vertices on the boundary of holes in a malformed 3D model generated from the Neural Radiance Field algorithm.
 
 ## Method 1: PCA-based
 The big idea is to "flatten" the 3D model into 2D points through principal component analysis (PCA), then iterate through the vertices and look at the 360-degree radial neighborhood centered at each vertex. We assume that vertices on hole boundaries will have more "empty" neighborhoods and vice versa. Vertices on the silhouette will have "emptier" neighborhoods, so we ignore them in this process to avoid falsely flagging them. 
@@ -70,7 +70,7 @@ The big idea is to "flatten" the 3D model into 2D points through principal compo
 </div>
 
 3. Put the 2D points into a KD-tree for efficient access of neighboring points in a fixed-radius neighborhood.
-4. For each `point` in the set of 2D points, find all points in its fixed-radius neighborhood. Imagine overlaying a coordinate grid over `point` with `point` as the origin. Then, divide the 360° neighborhood into 36 angular sectors of 10° each. If more than `threshold` consecutive sectors are empty of neighbors, we flag point as a boundary candidate and stores its _sindex_.
+4. For each `point` in the set of 2D points, find all points in its fixed-radius neighborhood. Imagine overlaying a coordinate grid over `point` with `point` as the origin. Then, divide the 360° neighborhood into 36 angular sectors of 10° each. If more than `threshold` consecutive sectors are empty of neighbors, we flag point as a boundary candidate and stores its _index_.
 <div>
     <img src="./imgs/pca_alg_visualized.png" style="width: auto; height: auto;">
 </div>
